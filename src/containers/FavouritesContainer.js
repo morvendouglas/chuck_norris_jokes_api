@@ -4,9 +4,12 @@ import FavouritesList from "../components/FavouritesList";
 const FavouritesContainer = ({ favourites, clearFavourites }) => {
 
   return (
-    <div className="favourites-container">
+    <>
+      <h1>Favourites</h1>
+      <div className="favourites-list">
       <FavouritesList favourites={favourites} clearFavourites={clearFavourites}/>
-    </div>
+      </div>
+    </>
   );
 };
 

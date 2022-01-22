@@ -4,7 +4,7 @@ const FavouritesList = ({ favourites, clearFavourites }) => {
 
 
     const favouritesList = favourites.map((favourite, index) => {
-        return <li value={index} key={index}>{favourite}</li>
+        return <li value={index} key={index}>&#9829; &nbsp; {favourite}</li>
     })
 
     const handleClearClick = () => {
@@ -12,10 +12,10 @@ const FavouritesList = ({ favourites, clearFavourites }) => {
     }
 
         return (
-            <div className='favourites-list'>
+            <>
             <ul>{favouritesList}</ul>
-            <button onClick={handleClearClick}>Clear Favourites</button>
-            </div>
+            <button onClick={handleClearClick} className="sticky-button">clear favourites</button>
+            </>
         )
 
 }

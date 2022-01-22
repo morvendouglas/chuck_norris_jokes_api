@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+body {
+  background: url(./images/background.png) no-repeat center center fixed; 
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  font-family: 'Mochiy Pop P One', sans-serif;
+  overflow-x: hidden
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
 }
 
-.App-link {
-  color: #61dafb;
+.child-1 {
+  width: 60%;
+  margin-right: 2%;
+  padding: 2vh 2vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.child-2 {
+  width: 40%;
+  margin-left: 2%;
+  padding: 2vh 2vw;
+  border-left: 2px solid darkred;
 }
+
+h1 {
+  font-size: 35px;
+}
+
+.random {
+  padding-top: 5vh;
+  padding-bottom: 4vh;
+  font-size: x-large;
+}
+
+.favourites {
+  padding-left: 2vw;
+  color: darkred;
+}
+
+.favourites-list {
+  margin-top: 3vh;
+  height: 70vh;
+}
+
+.favourites, ul, li {
+  list-style-type: none;
+  margin-bottom: 2vh;
+  margin-left: -2.1vh;
+}
+
+button {
+	box-shadow:inset 0px 1px 0px 0px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #8c9797 100%);
+	background-color: grey;
+	border-radius:6px;
+	border:1px solid grey;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+  font-family: 'Mochiy Pop P One', sans-serif;
+	text-shadow:0px 1px 0px #2b665e;
+  margin-top: 2vh;
+}
+button:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+.search-button {
+  margin-left: 2vw;
+}
+
+.favourite-button {
+  margin-top: 4vh;
+}
+
+.input {
+  width: 40%;
+  padding: 10px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin-right: 0.5vw;
+}
+
+
+
+
+
