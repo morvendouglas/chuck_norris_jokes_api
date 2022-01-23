@@ -6,7 +6,7 @@ const SearchBar = ({ updateInput, setSearchWord, setSearchResults }) => {
     setSearchWord(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     updateInput()
     setSearchResults(true)
@@ -15,7 +15,7 @@ const SearchBar = ({ updateInput, setSearchWord, setSearchResults }) => {
   return (
       <form onSubmit={handleSubmit}>
         <input
-          // key="search-bar"
+          name= "input"
           className="input"
           placeholder={"find a chuck norris joke"}
           onChange={handleChange}

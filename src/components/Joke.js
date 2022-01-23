@@ -1,20 +1,15 @@
 import React from "react";
 
-const Joke = ({ joke, favourites, setFavourites }) => {
+const Joke = ({ joke, addToFavourites }) => {
 
   const handleFavouritesClick = () => {
-    let newJoke = joke.value;
-    let tempArr = [...favourites];
-    if (tempArr.some((joke) => joke === newJoke) === false) {
-      tempArr.push(newJoke);
-    }
-    setFavourites(tempArr);
+    addToFavourites()
   };
 
   return (
   <div  className="random" >
-  <div>{joke.value}</div>
-  <button onClick={handleFavouritesClick} className="favourite-button">&#9829; &nbsp; add to favourites</button>
+  <div id="random-joke">{joke.value}</div>
+  <button onClick={handleFavouritesClick} className="favourite-button"> add to favourites</button>
   </div>
   )
 };

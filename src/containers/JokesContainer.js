@@ -1,11 +1,11 @@
 import React from "react";
 import Joke from "../components/Joke";
 
-const JokesContainer = ({ joke, favourites, setFavourites }) => {
+const JokesContainer = ({ joke, addToFavourites }) => {
 
   return (
     <div className="jokes-container">
-        <Joke joke={joke} favourites={favourites} setFavourites={setFavourites}/>
+        <Joke joke={joke} addToFavourites={addToFavourites}/>
     </div>
   );
 };
