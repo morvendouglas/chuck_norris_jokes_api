@@ -12,6 +12,8 @@ const SearchBar = ({ updateInput, setSearchWord, setSearchResults }) => {
     setSearchResults(true)
   };
 
+  // would like to figure out how to put search input as "" when submitted if i have time
+
   return (
       <form onSubmit={handleSubmit}>
         <input
