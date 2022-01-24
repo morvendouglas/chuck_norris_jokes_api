@@ -8,7 +8,7 @@ const Joke = ({ joke, addToFavourites }) => {
 
   return (
   <div  className="random" >
-  <div id="random-joke">{joke.value}</div>
+  <div id="random-joke" data-testid="random-joke">{joke.value}</div>
   <button onClick={handleFavouritesClick} className="favourite-button"> add to favourites</button>
   </div>
   )

@@ -8,17 +8,23 @@ const SearchBar = ({ updateInput, setSearchWord, setSearchResults }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    updateInput()
-    setSearchResults(true)
+    updateInput();
+    setSearchResults(true);
+
+    var myform = document.getElementById('myform');
+    myform.onsubmit = function(){
+    document.getElementById('myInput').value = "";
+
+    };
+
   };
 
-  // would like to figure out how to put search input as "" when submitted if i have time
-
   return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} id="myform">
         <input
           name= "input"
           className="input"
+          id="myInput"
           placeholder={"find a chuck norris joke"}
           onChange={handleChange}
         />

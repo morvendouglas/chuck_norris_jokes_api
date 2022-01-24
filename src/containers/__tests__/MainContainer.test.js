@@ -1,18 +1,22 @@
-import { render, screen, cleanup } from '@testing-library/react';
+import { render, screen, cleanup, fireEvent } from '@testing-library/react';
 import MainContainer from '../MainContainer';
 
 test('should render main container', () => {
-    render(<MainContainer />)
-    const element = screen.getByTestId('main-container-1')
+    render(<MainContainer />);
+    const element = screen.getByTestId('main-container-1');
     expect(element).toBeInTheDocument();
 })
 
-it('should be able to generate and render random chuck norris joke', () => {
-      render(<MainContainer/>)
-    //   const joke = screen.getByTestId('get-random-joke-button');
-    //   button.simulate('click');
-    //   expect(joke).toEqual(!null);
-})
+test('calls get random joke prop when clicked', () => {
+    const handleClick = jest.fn();
+    render(<button onClick={handleClick}>GET RANDOM JOKE</button>);
+    fireEvent.click(screen.getByText(/GET RANDOM JOKE/i));
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  })
+
+  // it('should be able to fetch random joke from api', () => {
+
+  // })
   
   // it('should be able to add random joke to favourites', () => {
 
@@ -26,12 +30,5 @@ it('should be able to generate and render random chuck norris joke', () => {
 
   // })
   
-  // it('should be able to clear favourites', () => {
-
-  // })
-  
-  // it('should be able to clear searched', () => {
-
-  // })
   
   
