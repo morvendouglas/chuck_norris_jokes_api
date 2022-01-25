@@ -98,7 +98,7 @@ const MainContainer = () => {
     <div className="container" data-testid="main-container-1">
       <div className="child-1">
         <h1>Chuck Norris Jokes</h1>
-        <button onClick={handleClick} data-testid="get-random-joke-button">GET RANDOM JOKE</button>
+        <button onClick={handleClick}>GET RANDOM JOKE</button>
         <button onClick={handleSearchClick} className="search-button">
           SEARCH FOR A JOKE
         </button>
